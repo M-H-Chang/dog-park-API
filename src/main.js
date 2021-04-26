@@ -2,12 +2,14 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ParkFinder from './src/js/finder.js';
-console.log($);
-console.log(ParkFinder);
+import ParkFinder from '../src/js/finder.js';
 
-$('#submit').on('click', (event) => {
+
+
+$('#submit').on('click', async (event) => {
   event.preventDefault();
-  let zipcode = $('#zipcode').val();
-
+  let zip = $('#zipcode').val();
+  const park = await ParkFinder.getPark(zip);
+  console.log(park);
 });
+
