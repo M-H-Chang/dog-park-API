@@ -14,6 +14,7 @@ export default class ParkFinder {
     return await latLong.json();
   }
 }
+// const photoURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo_reference}=${process.env.API_KEY}`;
 
 // const geo = dataSet.map(dataSet => dataSet.geopoint),
 //   geoPoint = {method: 'POST', body:JSON.stringify({geo})};
