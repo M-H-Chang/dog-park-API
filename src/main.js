@@ -3,35 +3,41 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ParkFinder from '../src/js/finder.js';
-import PhotoFinder from '../src/js/photos.js';
+// import PhotoFinder from '../src/js/photos.js';
 
 
 
 function getParksList(park) {
-  async function displayPhoto(photo) {
-    let response = await PhotoFinder.getPhoto(photo);
-    return response;
-  } 
+  // async function displayPhoto(photoRef) {
+  //   let photo = await PhotoFinder.getPhoto(photoRef); 
+  // //   if (photo.) {
+  // //     console.log(photo);
+  // //     return photo;
+  // //   }
+  // } 
+  // PhotoFinder.getPhoto(newPark.photos[0].photo_reference);
   let htmlForParksList = "";
   park.results.forEach(newPark => {
     if (newPark.photos) {
-      htmlForParksList += (`<div class="card container">
-                            <h3>${newPark.name}</h3>
-                            <li>${newPark.vicinity}</li>
-                            <li>Rating: ${newPark.rating} stars</li>
-                            <li id="photoRef">${newPark.photos[0].photo_reference}</li>
-                          </div>`);
-      let photo = newPark.photos[0].photo_reference;
-      displayPhoto(photo);
-      $('#photo-div').html(`<img src="${(displayPhoto(newPark.photos[0].photo_reference))}"/>`);
-
-      console.log(displayPhoto(newPark.photos[0].photo_reference));
+      // let photo = displayPhoto(newPark.photos[0].photo_reference);
+      htmlForParksList += (`<div class="card">
+                                <div class="card-body">
+                                  <h3 class="card-title">${newPark.name}</h3>
+                                  <li class="card-text">${newPark.vicinity}</li>
+                                  <li class="card-text">Rating: ${newPark.rating} stars</li>
+                                </div>
+                              </div>`);
+      // displayPhoto(photo);
+      //console.log(displayPhoto(newPark.photos[0].photo_reference));
+      //console.log(newPark.photos[0].photo_reference);
                         
     } else {
-      htmlForParksList += (`<div class="card container">
-                            <h3>${newPark.name}</h3>
-                            <li>${newPark.vicinity}</li>
-                            <li>Rating: ${newPark.rating} stars</li>
+      htmlForParksList += (`<div class="card">
+                                <div class="card-body">
+                                  <h3 class="card-title">${newPark.name}</h3>
+                                  <li class="card-text">${newPark.vicinity}</li>
+                                  <li class="card-text">Rating: ${newPark.rating} stars</li>
+                                </div>
                             </div>`);
     }
   });
@@ -46,8 +52,3 @@ $('#submit').on('click', async (event) => {
   console.log(park);
   getParksList(park);
 });
-
-//https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo_reference}=${process.env.API_KEY}
-
-
-// https://developers.google.com/maps/documentation/places/web-service/photos

@@ -1,0 +1,14 @@
+.card {
+  background-color: rgb(1, 109, 1);
+  margin: 2%;
+}
+
+body {
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: rgb(94, 94, 94);
+}
