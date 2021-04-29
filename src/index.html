@@ -5,22 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <title>Dog Park Finder</title>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="jumbotron">Dog Park Finder</h1>
-    <p>Enter a zipcode and find a park near you!</p>
-    <form id="form">
-      <label for="zip">Enter your zipcode:</label>
-      <input type="number" id="zipcode">
-      <button type="submit" class="btn btn-success" id="submit">Submit</button>
-    </form>
-  </div>
-  <div id="results" class="card-columns container">
-  </div>
-  <div id="photo-div"></div>
+    <div class="container dogheader">
+      <h1 class="title">Dog Park Finder</h1>
+      <p>Enter a zipcode and find a park near you!</p>
+      <form id="form">
+        <label for="zip">Enter your zipcode:</label>
+        <input type="number" id="zipcode">
+        <button type="submit" class="btn btn-success" id="submit">Submit</button>
+      </form>
+    </div>
+    <div id="results" class="card-columns container">
+    </div>
+    <div id="photo-div"></div>
 </body>
 
 </html>

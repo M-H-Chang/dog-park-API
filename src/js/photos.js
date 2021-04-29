@@ -10,4 +10,4 @@ export default class PhotoFinder {
   //     return response;
   //   });
   // }
-}
+} 

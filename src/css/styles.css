@@ -1,12 +1,29 @@
 .card {
-  background-color: rgb(1, 109, 1);
-  margin: 2%;
+  background-color: rgb(63, 155, 63);
+  box-shadow: 5px 5px 7px rgb(92, 33, 33);;
+  /* margin: 30px */
 }
 
 body {
-  background-color: grey;
+  background-color: rgb(242, 216, 12);
   color: white;
-  text-align: center;
+}
+
+.dogheader {
+  margin: 20px auto;
+  width: 60%;
+  background-image: url('../../assets/images/dog.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100%; ;
+  text-shadow: 1px 1px 5px rgba(1, 96, 116, 1);
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'Indie Flower';
+  /* -webkit-text-stroke: 0.005em black */
+
 }
 
 .jumbotron {
