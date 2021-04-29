@@ -12,17 +12,4 @@ export default class ParkFinder {
     const latLong = await fetch(url, this.dataSet);
     return await latLong.json();
   }
-  
-  // static async getPhoto() {
-  //   static async getPark(zip)
-  //   const photoRef = getPark(zip).newPark.photos[0].photo_reference;
-  //   const response = await fetch(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoRef}&key=${process.env.API_KEY}`);
-  //   // console.log(response.url);
-  //   return response.url;
-  // }
 }
-// const photoURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo_reference}=${process.env.API_KEY}`;
-
-// const geo = dataSet.map(dataSet => dataSet.geopoint),
-//   geoPoint = {method: 'POST', body:JSON.stringify({geo})};
-
